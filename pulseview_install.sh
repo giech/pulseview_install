@@ -23,7 +23,7 @@ function install_prerequisites {
 
 function install_postrequisites {
     # rules for identifying USB devices. assumes have downloaded libsigrokdecode from git already
-    sudo cp libsigrokdecode/contrib/z60_libsigrok.rules /etc/udev/rules.d/
+    sudo cp libsigrok/contrib/z60_libsigrok.rules /etc/udev/rules.d/
     sudo /etc/init.d/udev restart
     sudo gpasswd -a $USER plugdev
     
